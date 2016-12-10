@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Playground</title>
+
+	<link rel="stylesheet" type="text/css" href="main.css">
+	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" crossorigin="anonymous">
+
+	<!-- local js -->
+	<script src="index.js" crossorigin="anonymous"></script>
+
+	<!-- jQuery -->
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+
+	<!-- Bootsctrap js --> 
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+	<!-- Title -->
+	<div class="title">
+		<h1>Title of Page</h1>
+	</div>
+
+	<!-- Body -->
+	<div class="body">
+		<h4>Sub Header</h4>
+		<p> This is a story </p>
+		<p> This is another story </p>
+
+	</div>
+
+	<!-- Footer -->
+	<div class="footer">
+		<input type="number" class="form-control" id="numberOne"></br>
+		<input type="number" class="form-control" id="numberTwo"></br>
+		<p id="result">Result = </p>
+		<button class="btn btn-default" onclick="calculate('add')">Add</button>
+		<button class="btn btn-default" onclick="calculate('subtract')">Subtract</button>
+	</div>
+</body>
+
+<script>
+	function calculate(type){
+		var numberOne = parseInt($("#numberOne").val());
+		var numberTwo = parseInt($("#numberTwo").val());
+		console.log(numberOne, numberTwo);
+		var answer;
+
+		if(type == "add"){
+			answer = "Sum = " + add(numberOne, numberTwo);
+		}
+		else if(type == "subtract"){
+			answer = "Difference = " + subtract(numberOne, numberTwo);
+		}
+
+        
+		$("#result").text(answer);
+		console.log(answer);
+	}
+
+	function add (a,b){
+		var c;
+		c = a + b;
+		return c;
+	}
+
+	function subtract (a,b){
+		var c;
+		c = a - b;
+		return c;
+	}
+</script>
+</html>
