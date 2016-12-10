@@ -1,20 +1,26 @@
 .title {
-	background-color:black;
+	background-color:gray;
 	color: white;
 	text-align:center;
+	padding:5px;
+	margin-top:10px;
+	margin-left:100px;
+	margin-right:100px;
 }
 
 .body {
 	background-color:lightblue;
 	color:white;
-	text-align:center;
 	margin-left:100px;
 	margin-right:100px;
+	padding:20px;
 }
 
 .footer {
-	color: black;
+	background-color:gray;
+	color: white;
 	text-align:center;
 	margin-left:100px;
 	margin-right:100px;
+	padding:10px;
 }

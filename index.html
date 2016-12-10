@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Playground</title>
+	<title>SimpleCalculator</title>
 
 	<link rel="stylesheet" type="text/css" href="main.css">
 	
@@ -20,25 +20,24 @@
 <body>
 	<!-- Title -->
 	<div class="title">
-		<h1>Title of Page</h1>
+		<h1>Simple Calculator</h1>
 	</div>
 
 	<!-- Body -->
 	<div class="body">
-		<h4>Sub Header</h4>
-		<p> This is a story </p>
-		<p> This is another story </p>
+		<input type="number" class="form-control" id="numberOne"></br>
+		<input type="number" class="form-control" id="numberTwo"></br>
+		<button class="btn btn-default" onclick="calculate('add')">Add</button>
+		<button class="btn btn-default" onclick="calculate('subtract')">Subtract</button>
 
 	</div>
 
 	<!-- Footer -->
 	<div class="footer">
-		<input type="number" class="form-control" id="numberOne"></br>
-		<input type="number" class="form-control" id="numberTwo"></br>
-		<p id="result">Result = </p>
-		<button class="btn btn-default" onclick="calculate('add')">Add</button>
-		<button class="btn btn-default" onclick="calculate('subtract')">Subtract</button>
+		<h4 id="result">Result =</h4>
 	</div>
+
+
 </body>
 
 <script>
@@ -54,7 +53,6 @@
 		else if(type == "subtract"){
 			answer = "Difference = " + subtract(numberOne, numberTwo);
 		}
-
         
 		$("#result").text(answer);
 		console.log(answer);
