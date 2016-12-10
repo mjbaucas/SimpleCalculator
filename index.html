@@ -29,12 +29,13 @@
 		<input type="number" class="form-control" id="numberTwo"></br>
 		<button class="btn btn-default" onclick="calculate('add')">Add</button>
 		<button class="btn btn-default" onclick="calculate('subtract')">Subtract</button>
-
+		<button class="btn btn-default" onclick="calculate('divide')">Divide</button>
+		<button class="btn btn-default" onclick="calculate('multiply')">Multiply</button>
 	</div>
 
 	<!-- Footer -->
 	<div class="footer">
-		<h4 id="result">Result =</h4>
+		<h4 id="result"></h4>
 	</div>
 
 
@@ -53,6 +54,12 @@
 		else if(type == "subtract"){
 			answer = "Difference = " + subtract(numberOne, numberTwo);
 		}
+		else if(type == "divide"){
+			answer = "Quotient = " + divide(numberOne, numberTwo);
+		}
+		else if(type == "multiply"){
+			answer = "Product = " + multiply(numberOne, numberTwo);
+		}
         
 		$("#result").text(answer);
 		console.log(answer);
@@ -67,6 +74,18 @@
 	function subtract (a,b){
 		var c;
 		c = a - b;
+		return c;
+	}
+
+	function divide (a,b){
+		var c;
+		c = a/b;
+		return c;
+	}
+
+	function multiply (a,b){
+		var c;
+		c = a*b;
 		return c;
 	}
 </script>
